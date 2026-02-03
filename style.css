@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.main{
+    background-image:url(background\ image.jpg);
+    background-position: center;
+    height: 80vh;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.main .box{
+    background-color: black;
+    height: 80vh;
+     width: 100%;
+     opacity: .64;
+     position: absolute;
+     top: 0;
+
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 80vw;
+    margin: auto;
+    height: 62px;
+}
+
+nav img{
+    color: red;
+    width:114px ;
+    position: relative;
+    z-index: 10;
+}
+
+nav button{
+    position: relative;
+    z-index: 10;
+    border: red;
+    width: 90px;
+    height: 20px;
+    border-radius: 2px;
+    word-spacing: 10px;
+    
+}
