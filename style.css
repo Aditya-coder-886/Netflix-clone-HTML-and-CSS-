@@ -5,17 +5,21 @@
     margin: 0;
     padding: 0;
 }
+
+body{
+    background-color: black;
+}
 .main{
     background-image:url(background\ image.jpg);
     background-position: center;
-    height: 80vh;
+    height: 70vh;
     background-repeat: no-repeat;
     position: relative;
 }
 
 .main .box{
     background-color: black;
-    height: 80vh;
+    height: 70vh;
      width: 100%;
      opacity: .64;
      position: absolute;
@@ -50,7 +54,7 @@ nav button{
 
 .hero{
     font-family: "Martel Sans", sans-serif;
-    height: 100%;
+    height: calc(100%-62px);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -58,11 +62,36 @@ nav button{
     position: relative;
     z-index: 10;
     color: white;
+    gap: 0px;
+    padding: 23px;
 }
 
-.hero :first-child{
-    font-weight: bolder;
-    font-size: 48px;
+.hero> :nth-child(1){
+    font-weight: 900;
+    font-size: 56px;
+    text-align: center;
+
+    
 }
 
-.hero :
+.hero> :nth-child(2){
+    font-weight: 900;
+    font-size: 56px;
+    text-align: center;
+}
+.hero> :nth-child(3){
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+
+}
+.hero> :nth-child(4){
+    font-weight:400 ;
+    font-size:16px ;
+    text-align: center;
+}
+
+.separate{
+    height: 7px ;
+    background-color: grey;
+}
