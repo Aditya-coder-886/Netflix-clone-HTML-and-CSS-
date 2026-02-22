@@ -1,44 +1,54 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&display=swap');
 
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body{
     background-color: black;
 }
+
+/* MAIN BACKGROUND SECTION */
 .main{
-    background-image:url(background\ image.jpg);
+    background-image: url("background image.jpg");
     background-position: center;
+    background-size: cover;          /* makes background responsive */
     height: 70vh;
     background-repeat: no-repeat;
     position: relative;
+
+    display: flex;                   /* important for hero alignment */
+    flex-direction: column;
 }
 
+/* DARK OVERLAY */
 .main .box{
     background-color: black;
-    height: 70vh;
-     width: 100%;
-     opacity: .64;
-     position: absolute;
-     top: 0;
-
+    height: 100%;
+    width: 100%;
+    opacity: .64;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
+/* NAVBAR */
 nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
     max-width: 70vw;
+    width: 100%;
     margin: auto;
     height: 62px;
+    position: relative;
+    z-index: 10;
 }
 
 nav img{
-    color: red;
-    width:114px ;
+    width:114px;
     position: relative;
     z-index: 10;
 }
@@ -46,52 +56,210 @@ nav img{
 nav button{
     position: relative;
     z-index: 10;
-    border: red;
+    border: none;
     width: 90px;
-    height: 20px;
-    border-radius: 2px;        
+    height: 30px;
+    border-radius: 4px;
+    background-color: red;
+    color: white;
+    cursor: pointer;
 }
 
+/* HERO SECTION */
 .hero{
     font-family: "Martel Sans", sans-serif;
-    height: calc(100%-62px);
+
+    flex: 1;                         /* fills remaining space */
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+
     position: relative;
     z-index: 10;
     color: white;
-    gap: 0px;
-    padding: 23px;
-}
 
-.hero> :nth-child(1){
-    font-weight: 900;
-    font-size: 56px;
+    padding: 20px;
     text-align: center;
-
-    
 }
 
+/* RESPONSIVE TEXT */
+.hero> :nth-child(1),
 .hero> :nth-child(2){
     font-weight: 900;
-    font-size: 56px;
-    text-align: center;
+    font-size: clamp(28px, 6vw, 56px);
 }
+
 .hero> :nth-child(3){
     font-weight: 500;
-    font-size: 20px;
-    text-align: center;
-
+    font-size: clamp(16px, 3vw, 20px);
 }
+
 .hero> :nth-child(4){
-    font-weight:400 ;
-    font-size:16px ;
+    font-weight: 400;
+    font-size: clamp(14px, 2vw, 16px);
+}
+
+/* SEPARATOR LINE */
+.separate{
+    height: 7px;
+    background-color: grey;
+}
+
+/* OPTIONAL PADDING CLASS */
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+}
+
+/* MAIN BACKGROUND SECTION */
+.main{
+    background-image: url("background image.jpg");
+    background-position: center;
+    background-size: cover;          /* makes background responsive */
+    height: 70vh;
+    background-repeat: no-repeat;
+    position: relative;
+
+    display: flex;                   /* important for hero alignment */
+    flex-direction: column;
+}
+
+/* DARK OVERLAY */
+.main .box{
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    opacity: .64;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* NAVBAR */
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 70vw;
+    width: 100%;
+    margin: auto;
+    height: 62px;
+    position: relative;
+    z-index: 10;
+}
+
+nav img{
+    width:114px;
+    position: relative;
+    z-index: 10;
+}
+
+nav button{
+    position: relative;
+    z-index: 10;
+    border: none;
+    width: 90px;
+    height: 30px;
+    border-radius: 4px;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+}
+
+/* HERO SECTION */
+.hero{
+    font-family: "Martel Sans", sans-serif;
+
+    flex: 1;                         /* fills remaining space */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    position: relative;
+    z-index: 10;
+    color: white;
+
+    padding: 20px;
     text-align: center;
 }
 
+/* RESPONSIVE TEXT */
+.hero> :nth-child(1),
+.hero> :nth-child(2){
+    font-weight: 900;
+    font-size: clamp(28px, 6vw, 56px);
+}
+
+.hero> :nth-child(3){
+    font-weight: 500;
+    font-size: clamp(16px, 3vw, 20px);
+}
+
+.hero> :nth-child(4){
+    font-weight: 400;
+    font-size: clamp(14px, 2vw, 16px);
+}
+
+/* SEPARATOR LINE */
 .separate{
-    height: 7px ;
+    height: 7px;
     background-color: grey;
+}
+
+/* OPTIONAL PADDING CLASS */
+.padding{
+    margin: -10px;
+}
+
+/* EXTRA MOBILE OPTIMIZATION */
+@media (max-width: 768px){
+
+    nav{
+        max-width: 90vw;
+    }
+
+    nav img{
+        width: 90px;
+    }
+
+    nav button{
+        width: 70px;
+        height: 28px;
+        font-size: 12px;
+    }
+
+    .main{
+        height: 80vh;
+    }
+}
+
+/* EXTRA MOBILE OPTIMIZATION */
+@media (max-width: 768px){
+
+    nav{
+        max-width: 90vw;
+    }
+
+    nav img{
+        width: 90px;
+    }
+
+    nav button{
+        width: 70px;
+        height: 28px;
+        font-size: 12px;
+    }
+
+    .main{
+        height: 80vh;
+    }
 }
